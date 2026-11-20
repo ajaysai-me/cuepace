@@ -13,6 +13,18 @@
 
 CuePace runs entirely on your phone. There is no server, no account and no tracking: your scripts and recordings stay on the device unless you choose to save or share them.
 
+## Download
+
+**Android:** grab the latest `CuePace-vX.Y.Z.apk` from the [**Releases page**](../../releases/latest).
+
+1. Download the APK on your phone and open it.
+2. If Android asks, allow installs from your browser or file manager.
+3. Tap **Install**. Play Protect may warn you because the app isn't from the Play Store; tap **More details → Install anyway**.
+
+Each release lists the APK's SHA-256 checksum so you can verify the download. Updates install over the previous version and keep your scripts.
+
+**iPhone:** not available as a download yet (iOS doesn't allow installing app files directly). You can run it from source with the steps in [Getting started](#getting-started).
+
 ## Features
 
 - **Script library**: write, edit, duplicate and delete scripts, with word count and spoken-length estimate
@@ -54,7 +66,7 @@ cd android
 ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
 ```
 
-The APK is written to `android/app/build/outputs/apk/release/app-release.apk`. It is signed with the default debug key, which is fine for testing; use your own release key for anything you distribute.
+The APK is written to `android/app/build/outputs/apk/release/app-release.apk`. Without extra setup it's signed with the default debug key, which is fine for testing. To sign with your own key, see the comment at the top of `plugins/with-release-signing.js`.
 
 ## Project structure
 
@@ -67,6 +79,7 @@ The APK is written to `android/app/build/outputs/apk/release/app-release.apk`. I
 | `src/lib/recordings.ts` | Keeps video files in the app's documents folder |
 | `src/lib/theme.ts` | Colors, fonts and spacing |
 | `assets/` | App icon and splash image |
+| `plugins/` | Config plugins that shape the generated native projects |
 
 ## Contributing
 

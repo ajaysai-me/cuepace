@@ -3,7 +3,7 @@
     "name": "CuePace",
     "slug": "cuepace",
     "scheme": "cuepace",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,7 +21,7 @@
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "versionCode": 2
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -48,7 +48,8 @@
       ],
       "expo-font",
       "expo-video",
-      "expo-image"
+      "expo-image",
+      "./plugins/with-release-signing"
     ]
   }
 }
