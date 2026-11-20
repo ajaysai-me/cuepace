@@ -15,9 +15,8 @@
     "android": {
       "package": "com.cuepace.app",
       "adaptiveIcon": {
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#FFD500",
         "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
@@ -49,7 +48,16 @@
       "expo-font",
       "expo-video",
       "expo-image",
-      "./plugins/with-release-signing"
+      "./plugins/with-release-signing",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 300,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFD500"
+        }
+      ]
     ]
   }
 }
